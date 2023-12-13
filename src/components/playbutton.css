@@ -1,0 +1,14 @@
+button{
+    background-color: black;
+    color: aqua;
+    border-radius: 1em;
+    padding: .5em 1em ;
+
+}
+
+button:hover{
+
+    background-color: rgb(61, 60, 60);
+
+}
+
