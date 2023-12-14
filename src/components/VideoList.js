@@ -2,7 +2,7 @@ import Video from "./Video";
 import Playbutton from "./playbutton";
 import useVideo from "../hooks/Videos";
 import axios from 'axios'
-import { useEffect } from "react";
+import { useEffect ,useCallback } from "react";
 import useDispatch from "../hooks/VideoDispatch";
 // import Counter from "./components/counter";
 
@@ -11,17 +11,34 @@ function VideoList({editVideo}){
   const videos= useVideo();
   const dispatch=useDispatch()
   const url="https://my.api.mockaroo.com/video.json?key=a858cdf0"
+  console.log('videolist render')
+
+  
+  // async function handeClick(){
+  //   const res=await axios.get(url)
+  //   // console.log('getvideos',res.data)
+  //   dispatch({type:'LOAD',payload:res.data}) 
+  // }
+  
+  // useEffect(()=>{
+  //   handeClick();
+  // },[])
 
 
-  async function handeClick(){
-    const res=await axios.get(url)
-    // console.log('getvideos',res.data)
-    dispatch({type:'LOAD',payload:res.data}) 
+
+  const handeClick = useCallback(async () => {
+    try{
+    const res = await axios.get(url);
+    dispatch({ type: 'LOAD', payload: res.data });
+  }catch(error){
+    console.error('error fetching data:',error)
   }
-
-  useEffect(()=>{
+  }, [url, dispatch]);
+  
+  useEffect(() => {
     handeClick();
-  },[])
+  }, [handeClick]);
+  
 
     return(
        <>
