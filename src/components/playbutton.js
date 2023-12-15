@@ -14,7 +14,7 @@ function Playbutton({ children, onPlay, onPause}) {
   }
 
   return (
-    <button onClick={handleClick}> {children} : {playing?'⏸️':'▶️'} </button>
+    <button onClick={handleClick} className='playbutton-only'> {children} : {playing?'⏸️':'▶️'} </button>
   );
 }
 

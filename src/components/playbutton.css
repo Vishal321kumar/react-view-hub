@@ -3,6 +3,11 @@ button{
     color: aqua;
     border-radius: 1em;
     padding: .5em 1em ;
+    
+}
+.playbutton-only{
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
 
 }
 

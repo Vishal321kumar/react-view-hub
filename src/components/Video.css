@@ -1,14 +1,21 @@
 .container {
     width: 15em;
-    margin: 0 0.2em;
+    margin: 0.2rem 0.2rem;
     float: left;
     position: relative;
+
 }
 
 .pic img {
     width: 100%;
 }
 
+.pic{
+    border: 1px solid rgb(0, 0, 0);
+    border-bottom: none;
+    /* border-bottom: black; */
+
+}
 .title {
     font-weight: bold;
     margin-bottom: 1em;

@@ -45,14 +45,20 @@ function Addvideo({editableVideo}) {
     },[editableVideo])
 
   return(
+    <div className="heading-layout">
     
     <form>
+        <div className="input-form">
         <input ref={inputref} type="text" name="title" placeholder="title" value={video.title} onChange={handleChange}></input>
         <input type="text" name="views" placeholder="views" value={video.views} onChange={handleChange}></input>
         <button
              onClick={handleSubmit} >{editableVideo?'Edit':'Add'} Video
         </button>
+        </div>
     </form>
+    <div className="name">REACT View Hub</div>
+
+    </div>
 
   );
 }

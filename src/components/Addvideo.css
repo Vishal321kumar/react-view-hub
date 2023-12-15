@@ -3,3 +3,21 @@ input{
     padding: 0.5em;
     margin-bottom: 5px;
 }
+.input-form{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.heading-layout{
+    display: flex;
+}
+
+.name{
+    margin-left: 19rem;
+    font-size: 4rem ;
+    /* text-decoration: underline; */
+   
+    
+}
+
+  
